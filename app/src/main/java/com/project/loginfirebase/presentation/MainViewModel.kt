@@ -71,6 +71,10 @@ class MainViewModel(
         }
     }
 
+    fun clearValues() {
+        RegistrationFormStatus("", "", "", "", "")
+    }
+
 
     sealed class ValidationEvent {
         object Success : ValidationEvent()

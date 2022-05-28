@@ -7,32 +7,24 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Password
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.input.rotary.onPreRotaryScrollEvent
-import androidx.compose.ui.modifier.modifierLocalConsumer
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.toUpperCase
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.project.loginfirebase.ui.theme.LoginFirebaseTheme
-import java.util.*
 
 class MainActivity : ComponentActivity() {
 
@@ -54,6 +46,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun RegistrationForm(modifier: Modifier) {
     val viewModel = viewModel<MainViewModel>()
+    viewModel.clearValues()
     val state = viewModel.state
     val context = LocalContext.current
     LaunchedEffect(key1 = context) {
@@ -61,6 +54,9 @@ fun RegistrationForm(modifier: Modifier) {
             when (event) {
                 is MainViewModel.ValidationEvent.Success -> {
                     Toast.makeText(context, "Registration completed", Toast.LENGTH_LONG).show()
+                }
+                else -> {
+                    Toast.makeText(context, "Registration not completed", Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -73,6 +69,7 @@ fun RegistrationForm(modifier: Modifier) {
         OutlinedTextField(value = viewModel.state.email,
             onValueChange = {
                 viewModel.onEvent(RegistrationFormEvent.EmailChanged(it))
+
             }, modifier.fillMaxWidth(), isError = viewModel.state.emailError != null,
             placeholder = {
                 Text(text = "Email id", style = MaterialTheme.typography.subtitle1,
@@ -156,9 +153,15 @@ fun RegistrationForm(modifier: Modifier) {
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             Button(onClick = {
                 viewModel.onEvent(RegistrationFormEvent.Submit)
-            }, shape = RoundedCornerShape(8.dp)) {
-                Text(text = "Register",style = MaterialTheme.typography.subtitle1,
-                    color = MaterialTheme.colors.onSecondary,modifier= Modifier.align(Alignment.CenterVertically).height(30.dp).width(80.dp))
+            },
+                shape = RoundedCornerShape(8.dp),
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color.DarkGray),
+                modifier = Modifier
+                    .height(50.dp)
+                    .width(120.dp)) {
+                Text(text = "Register",
+                    style = MaterialTheme.typography.subtitle1,
+                    color = MaterialTheme.colors.onSecondary)
             }
         }
     }
