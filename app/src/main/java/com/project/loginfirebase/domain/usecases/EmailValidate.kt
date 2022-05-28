@@ -1,7 +1,6 @@
 package com.project.loginfirebase.domain.usecases
 
 import com.project.loginfirebase.domain.utils.Extension.checkValidEmailId
-import com.project.loginfirebase.domain.utils.ValidationResult
 
 class EmailValidate {
     fun execute(email: String): ValidationResult {

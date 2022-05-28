@@ -4,7 +4,6 @@ import com.project.loginfirebase.domain.utils.Extension.hasDigit
 import com.project.loginfirebase.domain.utils.Extension.hasLowerCase
 import com.project.loginfirebase.domain.utils.Extension.hasUpperCase
 import com.project.loginfirebase.domain.utils.Extension.length
-import com.project.loginfirebase.domain.utils.ValidationResult
 
 class ValidatePassword {
     fun execute(password: String): ValidationResult {

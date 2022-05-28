@@ -10,10 +10,10 @@ import com.project.loginfirebase.domain.usecases.ValidateTerms
 
 
 class MainViewModel(
-    private val emailValidate: EmailValidate,
-    private val validatePassword: ValidatePassword,
-    private val validateRepeatPassword: ValidateRepeatPassword,
-    private val validateTerms: ValidateTerms,
+    private val emailValidate: EmailValidate = EmailValidate(),
+    private val validatePassword: ValidatePassword = ValidatePassword(),
+    private val validateRepeatPassword: ValidateRepeatPassword = ValidateRepeatPassword(),
+    private val validateTerms: ValidateTerms = ValidateTerms(),
 ) : ViewModel() {
 
     private var _state = mutableStateOf(RegistrationFormStatus())
