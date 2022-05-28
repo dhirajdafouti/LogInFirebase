@@ -65,7 +65,7 @@ fun RegistrationForm(modifier: Modifier) {
     Column(verticalArrangement = Arrangement.Center, modifier = Modifier
         .fillMaxSize()
         .background(
-            MaterialTheme.colors.surface)) {
+            MaterialTheme.colors.primaryVariant)) {
         OutlinedTextField(value = viewModel.state.email,
             onValueChange = {
                 viewModel.onEvent(RegistrationFormEvent.EmailChanged(it))
@@ -78,6 +78,12 @@ fun RegistrationForm(modifier: Modifier) {
                 Icon(imageVector = Icons.Default.Star, contentDescription = null)
             }, keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Email
+            ), colors = TextFieldDefaults.textFieldColors(
+                backgroundColor = MaterialTheme.colors.background,
+                cursorColor = Color.Black,
+                disabledLabelColor = Color.Transparent,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent
             ))
 
 
@@ -103,7 +109,14 @@ fun RegistrationForm(modifier: Modifier) {
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Password
             ),
-            visualTransformation = PasswordVisualTransformation()
+            visualTransformation = PasswordVisualTransformation(),
+            colors = TextFieldDefaults.textFieldColors(
+                backgroundColor = MaterialTheme.colors.background,
+                cursorColor = Color.Black,
+                disabledLabelColor = Color.Transparent,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent
+            )
         )
         if (viewModel.state.passwordError != null) {
             Text(text = state.passwordError.toString(),
@@ -127,7 +140,13 @@ fun RegistrationForm(modifier: Modifier) {
             leadingIcon = {
                 Icon(imageVector = Icons.Default.Password, contentDescription = null)
             },
-            visualTransformation = PasswordVisualTransformation()
+            visualTransformation = PasswordVisualTransformation(),colors = TextFieldDefaults.textFieldColors(
+                backgroundColor = MaterialTheme.colors.background,
+                cursorColor = Color.Black,
+                disabledLabelColor = Color.Transparent,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent
+            )
         )
         if (viewModel.state.repeatedPasswordError != null) {
             Text(text = state.repeatedPasswordError.toString(),
@@ -161,7 +180,7 @@ fun RegistrationForm(modifier: Modifier) {
                     .width(120.dp)) {
                 Text(text = "Register",
                     style = MaterialTheme.typography.subtitle1,
-                    color = MaterialTheme.colors.onSecondary)
+                    color = MaterialTheme.colors.primaryVariant)
             }
         }
     }

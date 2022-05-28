@@ -7,12 +7,12 @@ class EmailValidate {
         if (email.isBlank()) {
             return ValidationResult(
                 false,
-                "Email Cannot be blank"
+                "Email cannot be blank!!!"
             )
         }
         if (!checkValidEmailId(email)) {
             return ValidationResult(false,
-                "This is not a valid EmailId")
+                "This is not a valid EmailId!!!")
         }
         return ValidationResult(
             true

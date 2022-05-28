@@ -10,28 +10,28 @@ class ValidatePassword {
         if (password.isBlank()) {
             return ValidationResult(
                 false,
-                "PassWord Cannot be blank"
+                "Password cannot be blank!!!"
             )
         }
         if (!hasDigit(password)) {
             return ValidationResult(false,
-                "Password has no single digit")
+                "Password has no single digit!!!")
         }
         if (!hasLowerCase(password)) {
             return ValidationResult(false,
-                "Password does not have Lower Case")
+                "Password does not have Lower Case!!")
         }
 
         if (!hasUpperCase(password)) {
             return ValidationResult(false,
-                "Password does not have Upper Case")
+                "Password does not have Upper Case!!")
         }
         if (!length(password)) {
             return ValidationResult(false,
-                "Password is weak")
+                "Password is weak!!")
         }
         return ValidationResult(
-            true, "Password is strong."
+            true, "Password is strong!!"
         )
     }
 }

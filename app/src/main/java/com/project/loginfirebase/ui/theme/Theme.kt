@@ -17,19 +17,19 @@ private val LightColorPalette = lightColors(
     primary = Purple200,
     primaryVariant = Purple700,
     secondary = Color.DarkGray,
-    background = Color.White,
+    background = Color.DarkGray,
     surface = Color.White,
     onPrimary = Color.White,
     onSecondary = Color.Black,
     onBackground = Color.Black,
     onSurface = Color.Black,
 
-    )
+)
 
 @Composable
 fun LoginFirebaseTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit,
+    content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
         DarkColorPalette
