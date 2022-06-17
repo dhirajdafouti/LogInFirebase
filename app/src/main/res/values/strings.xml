@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LoginFirebase</string>
+    <string name="next">NEXT</string>
+    <string name="_20sp">30sp</string>
 </resources>

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/dhira/OneDrive/Desktop/Kotlin/LoginFirebase/app/src/main/res/drawable/cirularedges.xml" value="0.12" />
+        <entry key="..\:/Users/dhira/OneDrive/Desktop/Kotlin/LoginFirebase/app/src/main/res/drawable/item_container_onboarding.xml" value="0.1585" />
+        <entry key="..\:/Users/dhira/OneDrive/Desktop/Kotlin/LoginFirebase/app/src/main/res/drawable/onboarding_inactive.xml" value="0.1" />
+        <entry key="..\:/Users/dhira/OneDrive/Desktop/Kotlin/LoginFirebase/app/src/main/res/layout/activity_onboarding.xml" value="0.1703125" />
+        <entry key="..\:/Users/dhira/OneDrive/Desktop/Kotlin/LoginFirebase/app/src/main/res/layout/item_container.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

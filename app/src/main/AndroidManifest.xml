@@ -12,22 +12,13 @@
         <activity
             android:name=".onboarding.OnboardingActivity"
             android:exported="true"
-            android:theme="@style/Theme.LoginFirebaseOnBoarding">
+            android:theme="@style/Theme.LoginFirebase">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN">
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </action>
-            </intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity
-            android:name=".auth.AuthActivity"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".presentation.MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.LoginFirebase" />
     </application>
 
 </manifest>
