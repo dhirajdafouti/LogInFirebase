@@ -3,8 +3,16 @@
 
     <style name="Theme.LoginFirebase" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:background">@color/teal_200</item>
+        <item name="android:windowDisablePreview">true</item>
     </style>
     <style name="Theme.LoginFirebaseOnBoarding" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/teal_200</item>
     </style>
+
+    <style name="Theme.NotesApplication" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
 </resources>
