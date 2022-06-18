@@ -21,7 +21,6 @@ class CustomAdapter(private val dataSet: List<OnBoardingItem>) :
             image = view.findViewById(R.id.imageOnBoarding)
         }
 
-        /* Bind flower name and image. */
         fun bind(item: OnBoardingItem) {
             title.text = item.title
             description.text = item.description
