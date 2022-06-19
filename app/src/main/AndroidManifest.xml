@@ -10,14 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginFirebaseOnBoarding">
         <activity
-            android:theme="@style/Theme.LoginFirebaseOnBoarding"
-            android:name=".presentation.MainActivity"
-            android:exported="true">
+            android:name=".login.FirebaseLoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LoginFirebaseMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".presentation.MainActivity">
         </activity>
     </application>
 

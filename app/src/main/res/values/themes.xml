@@ -6,9 +6,31 @@
         <item name="android:background">@color/teal_200</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
+
     <style name="Theme.LoginFirebaseOnBoarding" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">?attr/colorPrimaryVariant</item>
         <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.LoginFirebaseMain" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/primary_light</item>
+
+        <!--Secondary brand color -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="materialButtonStyle">@style/mybutton</item>
+        <item name="backgroundColor">@color/white</item>
+    </style>
+
+    <style name="mybutton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="cornerRadius">10dp</item>
     </style>
 
     <style name="Theme.NotesApplication" parent="android:Theme.Material.Light.NoActionBar">

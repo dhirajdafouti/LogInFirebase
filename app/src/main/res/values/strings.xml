@@ -3,4 +3,5 @@
     <string name="next">NEXT</string>
     <string name="_20sp">30sp</string>
     <string name="skip">Skip</string>
+    <string name="basic_firebase_auth">Basic Firebase Auth</string>
 </resources>
