@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
@@ -24,6 +25,7 @@ class OnboardingActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.activity_onboarding)
+        linearIndicator =findViewById(R.id.layoutOnBoardingIndicator)
         val onBoardingItem: List<OnBoardingItem> = onBoardingItemInitialization()
         viewPager2 = findViewById(R.id.onboardingViewPager)
         customAdapter = CustomAdapter(onBoardingItem)
